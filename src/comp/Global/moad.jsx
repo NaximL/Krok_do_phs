@@ -74,7 +74,7 @@ const MoadReg = ({ state,o }) => {
                                 id="phoneNumber"
                                 value={phone}
                                 onInput={handlePhoneChange}
-                                placeholder="380123456789"
+                                placeholder="123456789"
                                 aria-label="Phone number"
                             />
                         </div>

@@ -13,7 +13,7 @@ const B2_card = ({text,ico,dop,ok}) => {
         ok()
     }
     return ( 
-    <div className="B2_card">
+    <div className="B2_card track-visibility">
         <img src={`imgs${ico}`} className="B2_card_img" />
         <b className="B2_card_text">{text}</b>
         <button onClick={add_ten} className="B2_card_butt">Звернутися!</button>

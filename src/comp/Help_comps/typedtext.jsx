@@ -11,7 +11,7 @@ function Txt({ txt, t, onEnd }) {
       }, t);
       return () => clearTimeout(id);
     } else {
-      setTimeout(onEnd, 10000);
+      setTimeout(onEnd, 13000);
     }
   }, [disp, txt, t, onEnd]);
 

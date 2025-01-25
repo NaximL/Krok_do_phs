@@ -40,18 +40,33 @@ const Home = () => {
         setZvern(false); 
     }
     useEffect(()=>{
+        
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 }); 
+  
+  const elements = document.querySelectorAll('.track-visibility');
+  
+  elements.forEach(element => {
+    observer.observe(element);
+  });
 
         if (!localStorage.progres) {
             localStorage.progres = 0
         }
 
-        setInterval(()=>{
-            document.documentElement.style.setProperty('--global_c1', JSON.parse(localStorage.color).color1);
-
-            document.documentElement.style.setProperty('--global_c2', JSON.parse(localStorage.color).color2);
-
-
-        },1)
+        const updateColors = () => {
+            if (localStorage.color) {
+                document.documentElement.style.setProperty('--global_c1', JSON.parse(localStorage.color).color1);
+                document.documentElement.style.setProperty('--global_c2', JSON.parse(localStorage.color).color2);
+            }
+        };
+        updateColors();
 
         get(global.url).then((data)=>{
             console.log(data);
@@ -62,6 +77,7 @@ const Home = () => {
         })
     },[])
     
+
     
     return (  
         <>
@@ -75,9 +91,9 @@ const Home = () => {
                 
                 <div className='Head'>
 
-                <TypingTexts text={"Потрібна підтримка? Ми тут, щоб тебе вислухати."} time={100} />
-                <p className='Nasl_Head'>Про таке не мовчать</p>
-            
+                <div className='track-visibility awf'><TypingTexts text={"Потрібна підтримка? Ми тут, щоб тебе вислухати."} time={100} /></div>
+                <p className='Nasl_Head track-visibility awf'>Про таке не мовчать</p>
+       
                 </div>
             </Block_m>
 

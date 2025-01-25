@@ -34,7 +34,7 @@ function fw(fw) {
 }
     return ( 
         <nav className="nav_bar">
-            <Guide text={"Навігація--->"} style={"g1"}/>
+            {/* <Guide text={"Навігація--->"} style={"g1"}/> */}
             <div>
         {Menu.map((data,index)=>(
             <Menu_el ine={index} fun={fw} did={data} key={index}/>

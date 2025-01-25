@@ -25,7 +25,7 @@ const B2_cont_card = ({children,onsub}) => {
         }
     ];
     return ( 
-    <div className="B2_cont_card">
+    <div className="B2_cont_card ">
     {datas.map((data,index)=>(
         <B2_card ok={onsub} key={index} text={data.text} ico={data.ico}/>
     ))}
