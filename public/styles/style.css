@@ -926,8 +926,12 @@ transform: translate(-50%,-50%);
         width: 90%;
     }
     
-
-
+    .ne_sigma_class {
+        width: 100% !important;
+    }
+    .sigma_class {
+        width: 100% !important;
+    }
 }
 
 
