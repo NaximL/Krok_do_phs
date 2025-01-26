@@ -60,13 +60,7 @@ const observer = new IntersectionObserver((entries, observer) => {
             localStorage.progres = 0
         }
 
-        const updateColors = () => {
-            if (localStorage.color) {
-                document.documentElement.style.setProperty('--global_c1', JSON.parse(localStorage.color).color1);
-                document.documentElement.style.setProperty('--global_c2', JSON.parse(localStorage.color).color2);
-            }
-        };
-        updateColors();
+        
 
         get(global.url).then((data)=>{
             console.log(data);
@@ -107,7 +101,12 @@ const observer = new IntersectionObserver((entries, observer) => {
                 <Main_content_B3/>
 
             </Block_m>
-           
+          
+            <Block_m  hide={"hide"} id={4}>
+
+
+            </Block_m>
+            
             
         </>
     );

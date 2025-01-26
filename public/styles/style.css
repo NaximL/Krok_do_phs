@@ -120,7 +120,8 @@ input[type="number"] {
 #b3 {
     top: 200%;
     background-color: rgb(255, 255, 255);   
-}#b4 {
+}
+#b4 {
     top: 300%;
     background-color: rgb(255, 255, 255);
 }
@@ -168,6 +169,56 @@ transform: translate(0px,0px);
     z-index: 100;
     
 }
+.T_botd {
+    position: fixed;
+    left: 20px;
+    top: 70px;
+    width: 190px;
+    height: 35px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    border: 3px solid var(--global_c2);
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+    b {
+        position: absolute;
+        margin-left: 40px;
+        top: 50%;
+        transform:translate(0px,-50%);        
+        color: var(--nighte);
+
+    transition: all 0.3s ease;
+    }
+}
+.T_botd::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top:50%;
+    transform: translate(0px,-50%);
+    background-image: url(../imgs/telegram.svg);
+    background-size: cover;
+    background-position: center; 
+    width: 30px;
+    height: 30px;
+}
+
+
+.T_botd:hover {
+    
+    background-color:var(--global_c2);
+ b {
+    color:white
+ }
+    
+}
+
+
+
+
+
+
 
 
 .Avatar {
@@ -225,9 +276,9 @@ transform: translate(0px,0px);
 
 .Tazers {
     position: fixed;
-    right: 20px;
-    top: 70px;
-    width: 120px;
+    left: 20px;
+    top: 20px;
+    width: 255px;
     height: 35px;
     transition: all 0.3s ease;
     border-radius: 8px;
@@ -237,9 +288,9 @@ transform: translate(0px,0px);
     background-color: white;
     b {
         position: absolute;
-        left:60%;
+        margin-left: 40px;
         top: 50%;
-        transform:translate(-50%,-50%);
+        transform:translate(0px,-50%);        
         color: var(--nighte);
 
     transition: all 0.3s ease;
@@ -822,14 +873,227 @@ transform: translate(-50%,-50%);
 }
 
 
+.hellp {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 230px;
+    height: 230px;
+    border-radius: 50%; 
+    font-size: 40px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background-color: color-mix(in srgb, var(--global_c2), black 30%);
+    color: white;
+    z-index: 100;
+
+}
+
+.hellp p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.hellpfw {
+    border-radius: 15px;
+    border: 0px;
+    background-color: white;
+    width: 80%;
+    height: 70%;
+}
 
 
 
+.Cord {
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%);
+}
+
+.Ader {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+    
 
 
+}
+.show {
+    display: block !important;
+}
+
+.hides {
+    display: none;
+}
+
+.textd {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    top: 30px;
+    color: black;
+    width: 90%;
+}
+
+.textte {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 130px;
+    width: 90%;
+    height: 100px;
+    border-radius: 15px;
+    background-color: color-mix(in srgb, var(--global_c2), black 30%);
+    color: white;
+    display: block;
+    font-weight: bold;
+}
+.textno {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 10px;
+    width: 90%;
+    height: 100px;
+    border-radius: 15px;
+    background-color: color-mix(in srgb, var(--global_c2), black 30%);
+    color: white;
+    display: block;
+    font-weight: bold;
+}
 
 
+.gafw {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+    width: 80%;
+    border-radius: 10px;
+    background-color: var(--global_c2);
+    height: auto;
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+    z-index: 100;
+}
+.back_active {
+    opacity: 1 !important;
+}
 
+.back {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    display: block;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);    
+   
+    
+    transition: all 0.3s ease;
+}
+.model {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    height: 70%;
+    background-color: white;
+    border-radius: 15px;
+    transform: translate(-50%,-50%);
+    display: block;
+    z-index: 10000;
+    transition: all 0.3s ease;
+    display: none;
+}
+
+.fwa {
+    position: relative;
+    left: 5px;
+    top: 10px;
+    font-size: 25px;
+}
+
+.fwaf {
+    position: relative;
+    left: 5px;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+
+.gafwf {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%);
+    width: 100%;
+    border-radius: 0px 0px 15px 15px;
+    background-color:color-mix(in srgb, var(--global_c2), black 10%);
+    height: 50px;
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+}
+
+.Wfawf {
+    position: absolute;
+    left: 5px;
+    
+    bottom: 180px;
+    color: black;
+    font-size: 23px;
+}
+
+.slider {
+    bottom: 110px;
+    width: 95%;
+    height: 50px;
+    background: #ccc;
+    border-radius: 25px;
+    position: absolute;
+    cursor: pointer;
+  }
+  .slider-thumb {
+    width: 50px;
+    height: 50px;
+    background-color: var(--global_c2);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    transition: all 0.1s;
+  }
+
+.fawfwa {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%);
+    width: 100%;
+    border-radius: 0px 0px 15px 15px;
+    background-color:color-mix(in srgb, var(--global_c2), black 10%);
+    height: 50px;
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+    display: none;
+}
+
+
+.fwfa {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%,-30px);
+    top: 0px;
+    transition: all 0.3s ease;
+}
+
+/*MEDIA*/
 
 
 @media (max-width: 600px) {

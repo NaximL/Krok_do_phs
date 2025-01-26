@@ -1,10 +1,10 @@
-import Avata from "./Avata";
+import Avata from "./Wfa";
 import R_card from "./Rada_cart";
 import { useState,useEffect } from "react";
 import Progres from "./Progras_psih";
 import Guide from "../B1/Guide";
 import Nav_gaw from "./Navigat";
-import Taxets from "./Taxes";
+import Wfa from "./Wfa";
 const Header = () => {
     const [progress, setProgress] = useState(0);
   
@@ -28,8 +28,12 @@ const Header = () => {
         
             <Guide text={"<---Прогрес дослідження "} style={"g2"}/>
             </div>
-            <Avata/>
-            <Taxets/>
+            
+            <Wfa src={"/card_chc"} clas={"Avatar"} text={"Картки"}/>
+            <Wfa src={"/help"} clas={"Tazers"} text={"Термінова допомога"}/>
+            <Wfa src={"https://t.me/Painosnsbot"} clas={"T_botd"} text={"Телеграм бот"} d={true}/>
+      
+      
         </div>
      );
 }

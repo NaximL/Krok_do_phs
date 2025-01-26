@@ -22,8 +22,6 @@ const Card_chc = () => {
 
     const [Lst,setLst] = useState([])
     useEffect(()=>{
-        document.documentElement.style.setProperty('--global_c1', JSON.parse(localStorage.color).color1);
-        document.documentElement.style.setProperty('--global_c2', JSON.parse(localStorage.color).color2);
         get(global.url).then((data) => {
             setLst(data);
             console.log(data)

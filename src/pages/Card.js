@@ -101,8 +101,8 @@ const Card = ({test}) => {
         
      
 
-        document.documentElement.style.setProperty('--global_c1', JSON.parse(localStorage.color).color1);
-        document.documentElement.style.setProperty('--global_c2', JSON.parse(localStorage.color).color2);
+      
+        
     }, []);
 
     return (
