@@ -54,7 +54,7 @@ const Help_fwa = () => {
 
             document.querySelector(".fwfa").style = "transform: translate(-50%, 30px)";
             
-            makeCall('+380665190154', `Виклик допомоги на ${Location} `);
+            makeCall('+380665190154', `Call for help at the coordinates: ${ln} ${lt}`);
         }, 1000);
     }
 
