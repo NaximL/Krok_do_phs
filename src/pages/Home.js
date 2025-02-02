@@ -10,6 +10,8 @@ import Main_content_B3 from '../comp/B3/B3_Main';
 import MAN from "../imgs/MAN.png"
 import M_color from '../comp/Global/modal_color';
 import MoadReg from '../comp/Global/moad';
+import Carus from '../comp/B4/cariis';
+import Wfa from '../comp/Header/Wfa';
 
 
 async function get(url) {
@@ -60,7 +62,7 @@ const observer = new IntersectionObserver((entries, observer) => {
             localStorage.progres = 0
         }
 
-        
+
 
         get(global.url).then((data)=>{
             console.log(data);
@@ -103,8 +105,9 @@ const observer = new IntersectionObserver((entries, observer) => {
             </Block_m>
           
             <Block_m  hide={"hide"} id={4}>
-
-
+            <h1 className='track-visibility faw'>Притулок для жінок
+            <Wfa src={"/help"} clas={"fwafw"} text={"Потрібна допомога"}/></h1>
+            <img src="imgs/ditina1.png" className='waf'/>
             </Block_m>
             
             

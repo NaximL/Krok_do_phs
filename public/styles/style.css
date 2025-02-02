@@ -235,9 +235,9 @@ transform: translate(0px,0px);
     background-color: white;
     b {
         position: absolute;
-        left:60%;
+        margin-left: 40px;
         top: 50%;
-        transform:translate(-50%,-50%);        
+        transform:translate(0px,-50%);        
         color: var(--nighte);
 
     transition: all 0.3s ease;
@@ -1093,6 +1093,141 @@ transform: translate(-50%,-50%);
     transition: all 0.3s ease;
 }
 
+
+
+.fawg {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%,20px);
+display: none;
+    width: 95%;
+    height: 35px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    border: 3px solid var(--global_c2);
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+    b {
+        position: absolute;
+        margin-left: 40px;
+        top: 50%;
+        transform:translate(0px,-50%);        
+        color: var(--nighte);
+
+    transition: all 0.3s ease;
+    }
+}
+.fawg::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top:50%;
+    transform: translate(0px,-50%);
+    background-image: url(../imgs/select.png);
+    background-size: cover;
+    background-position: center; 
+    width: 25px;
+    height: 25px;
+}
+
+
+.fawg:hover {
+    
+    background-color:var(--global_c2);
+ b {
+    color:white
+ }
+    
+}
+
+
+.faw {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 60%;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.faw::before {
+    content: "Притулок для жінок «Світло надії» з 2017 року допомагає жінкам, що постраждали від домашнього та гендерно зумовленого насильства захиститись від кривдників та почати нове життя. Для цього ми надаємо комплексні послуги з тимчасового проживання, психологічну та правову допомогу, а також консультуємо жінок, які цього потребують.";
+    position: absolute;
+    left: 0px;    
+    top: 80px;
+    width: 80%;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.awfg {
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30%;
+    height: 50%;
+}
+
+.waf {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 35%;
+    height: 45%;
+
+    object-fit:cover;
+    border-radius: 15px;
+}
+
+
+.fwafw {
+    position: relative;
+    bottom: 0px;
+    font-weight: normal !important;
+    width: 245px;
+    height: 35px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    border: 3px solid var(--global_c2);
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+    b {
+        position: absolute;
+        margin-left: 40px;
+        top: 50%;
+        transform:translate(0px,-50%);        
+        color: var(--nighte);
+
+    transition: all 0.3s ease;
+    }
+}
+.fwafw::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top:50%;
+    transform: translate(0px,-50%);
+    background-image: url(../imgs/nasl.png);
+    background-size: cover;
+    background-position: center; 
+    width: 25px;
+    height: 25px;
+}
+
+
+.fwafw:hover {
+    
+    background-color:var(--global_c2);
+ b {
+    color:white
+ }
+    
+}
+
+
 /*MEDIA*/
 
 
@@ -1196,6 +1331,33 @@ transform: translate(-50%,-50%);
     .sigma_class {
         width: 100% !important;
     }
+
+    .Tazers {
+        top: 20px;
+        width: 95%;
+        left: 50%;
+        transform: translate(-50%,-500%);
+    }
+
+    .Avatar {
+        top: 60px;
+        left: 50%;
+        transform: translate(-50%,-500%);
+  
+        width: 95%;
+    }
+    .T_botd {
+        top: 100px;
+        width: 95%;
+        left: 50%;
+        transform: translate(-50%,-500%);
+    }
+
+
+    .fawg {
+        display: block;
+    }
+
 }
 
 

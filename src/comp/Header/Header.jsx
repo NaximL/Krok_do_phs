@@ -7,7 +7,24 @@ import Nav_gaw from "./Navigat";
 import Wfa from "./Wfa";
 const Header = () => {
     const [progress, setProgress] = useState(0);
-  
+    const [open, setOpen] = useState(false);
+    const awf = ()=>{
+        if (open) {
+        document.getElementsByClassName("Avatar")[0].style = "transform:translate(-50%,-500%)"
+        document.getElementsByClassName("Tazers")[0].style = "transform:translate(-50%,-500%)"
+        document.getElementsByClassName("T_botd")[0].style = "transform:translate(-50%,-500%)"
+        document.getElementsByClassName("fawg")[0].style = "transform:translate(-50%,20px)"
+        setOpen(!open);
+        }
+        else{
+            document.getElementsByClassName("Avatar")[0].style = "transform:translate(-50%,10px)"
+            document.getElementsByClassName("Tazers")[0].style = "transform:translate(-50%,10px)"
+            document.getElementsByClassName("T_botd")[0].style = "transform:translate(-50%,10px)"
+            document.getElementsByClassName("fawg")[0].style = "transform:translate(-50%,150px)"
+            setOpen(!open);
+        }
+
+    }
 
     useEffect(()=>{
         let i = 0
@@ -28,7 +45,7 @@ const Header = () => {
         
             <Guide text={"<---Прогрес дослідження "} style={"g2"}/>
             </div>
-            
+            <div onClick={awf} className="fawg"><b>Меню</b></div>
             <Wfa src={"/card_chc"} clas={"Avatar"} text={"Картки"}/>
             <Wfa src={"/help"} clas={"Tazers"} text={"Термінова допомога"}/>
             <Wfa src={"https://t.me/Painosnsbot"} clas={"T_botd"} text={"Телеграм бот"} d={true}/>
