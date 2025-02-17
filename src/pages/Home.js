@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import {useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../comp/Nav_bar/nav_bar';
 import Block_m from '../comp/Global/block_tiitle';
@@ -12,6 +12,7 @@ import M_color from '../comp/Global/modal_color';
 import MoadReg from '../comp/Global/moad';
 import Carus from '../comp/B4/cariis';
 import Wfa from '../comp/Header/Wfa';
+import Loading from '../comp/Global/Loading';
 
 
 async function get(url) {
@@ -31,88 +32,112 @@ async function get(url) {
 
 
 const Home = () => {
-    const [zvern, setZvern] = React.useState(false);
+    const [zvern, setZvern] = useState(false);
+    const [Load, setLoad] = useState(false);
 
-    const open = ()=>{
+    const open = () => {
         let dw = document.getElementById("b1");
-        dw.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (dw) {
+            dw.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
         setZvern(true);
-    }
-    const closef =() =>{
-        setZvern(false); 
-    }
-    useEffect(()=>{
-        
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 }); 
-  
-  const elements = document.querySelectorAll('.track-visibility');
-  
-  elements.forEach(element => {
-    observer.observe(element);
-  });
+    };
 
+    const closef = () => {
+        setZvern(false);
+    };
+
+    useEffect(() => {
         if (!localStorage.progres) {
-            localStorage.progres = 0
+            localStorage.progres = 0;
         }
 
-
-
-        get(global.url).then((data)=>{
+        get(global.url).then((data) => {
             console.log(data);
             setTimeout(() => {
-            document.getElementsByClassName("Nasl_Head")[0].style = "transform:translate(0px,50px)"
-                
+                const naslHead = document.querySelector(".Nasl_Head");
+                if (naslHead) naslHead.style.transform = "translate(0px,50px)";
             }, 1000);
-        })
-    },[])
-    
+        });
 
-    
-    return (  
+        const initObserver = () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            const elements = document.querySelectorAll('.track-visibility');
+            elements.forEach(element => observer.observe(element));
+        };
+
+        const handleLoad = () => {
+            setLoad(true);
+            initObserver(); 
+        };
+
+        if (document.readyState === "complete") {
+            handleLoad(); 
+        } else {
+            window.addEventListener("load", handleLoad);
+        }
+
+        return () => {
+            window.removeEventListener("load", handleLoad);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (Load) {
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            const elements = document.querySelectorAll('.track-visibility');
+            elements.forEach(element => observer.observe(element));
+        }
+    }, [Load]);
+
+    return (
         <>
-            <M_color/>
-            <div className='back'></div>
-            
-            <Header/>
-            <Navbar/>   
-            <MoadReg o={closef} state={zvern}/>
-            <Block_m id={1}>
-                
-                <div className='Head'>
+            {Load ? (
+                <>
+                    <div className='back'></div>
 
-                <div className='track-visibility awf'><TypingTexts text={"Потрібна підтримка? Ми тут, щоб тебе вислухати."} time={100} /></div>
-                <p className='Nasl_Head track-visibility awf'>Про таке не мовчать</p>
-       
-                </div>
-            </Block_m>
+                    <Header />
+                    <Navbar />
+                    <MoadReg o={closef} state={zvern} />
+                    <Block_m id={1}>
+                        <div className='Head'>
+                            <div className='track-visibility awf'>
+                                <TypingTexts text={"Потрібна підтримка? Ми тут, щоб тебе вислухати."} time={100} />
+                            </div>
+                            <p className='Nasl_Head track-visibility awf'>Про таке не мовчать</p>
+                        </div>
+                    </Block_m>
 
-            <Block_m hide={"hide"} id={2}>
+                    <Block_m hide={"hide"} id={2}>
+                        <B2_cont_card onsub={open} />
+                    </Block_m>
 
-                <B2_cont_card onsub={open}/>
-            </Block_m>
-
-            <Block_m  hide={"hide"} id={3}>
-
-                <Main_content_B3/>
-
-            </Block_m>
-          
-            <Block_m  hide={"hide"} id={4}>
-            <h1 className='track-visibility faw'>Притулок для жінок
-            <Wfa src={"/help"} clas={"fwafw"} text={"Потрібна допомога"}/></h1>
-            <img src="imgs/ditina1.png" className='waf'/>
-            </Block_m>
-            
-            
+                    <Block_m hide={"hide"} id={3}>
+                        <Main_content_B3 />
+                    </Block_m>
+                </>
+            ) : (
+                <Loading />
+            )}
         </>
     );
-}
- 
+};
+
 export default Home;

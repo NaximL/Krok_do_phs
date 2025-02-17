@@ -11,6 +11,7 @@ const MoadReg = ({ state,o }) => {
     if (state === true) {        
         document.getElementsByClassName("Mad")[0].style = "transform:translate(-50%,-50%)";
         document.getElementsByClassName("back")[0].style = "display:block";
+        document.getElementsByClassName("back")[0].classList.add("active");
         document.body.style.overflow = 'hidden';
     }
 
@@ -32,6 +33,7 @@ const MoadReg = ({ state,o }) => {
         };
         document.getElementsByClassName("Mad")[0].style = "transform:translate(200%,-50%)";
         document.getElementsByClassName("back")[0].style = "display:none";
+        document.getElementsByClassName("back")[0].classList.remove("active");
         document.body.style.overflow = 'auto';
         o();
     }
@@ -39,6 +41,7 @@ const MoadReg = ({ state,o }) => {
     function zvernn() {
         document.getElementsByClassName("Mad")[0].style = "transform:translate(-300%,-50%)";
         document.getElementsByClassName("back")[0].style = "display:none";
+        document.getElementsByClassName("back")[0].classList.remove("active");
         document.body.style.overflow = 'auto';
         console.log(321);
         o();
