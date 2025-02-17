@@ -1188,6 +1188,7 @@ display: none;
 .fwafw {
     position: relative;
     bottom: -15px;
+    display: block;
     font-weight: normal !important;
     width: 245px;
     height: 35px;
