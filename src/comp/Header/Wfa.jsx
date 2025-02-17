@@ -1,13 +1,11 @@
-import user from "../../imgs/user.png";
+import { Link } from "react-router-dom";
 
-const Wfa = ({ clas, text, src, d }) => {
+
+const Wfa = ({ clas, text, src }) => {
     return (
-        <div
-            className={clas}
-            onClick={() => d ? (document.location.href = src) :window.open(src)}
-        >
+        <Link to={src} className={clas}>
             <b>{text}</b>
-        </div>
+        </Link>
     );
 };
 

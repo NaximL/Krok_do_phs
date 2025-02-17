@@ -48,7 +48,7 @@ const Header = () => {
             <div onClick={awf} className="fawg"><b>Меню</b></div>
             <Wfa src={"/card_chc"} clas={"Avatar"} text={"Картки"}/>
             <Wfa src={"/help"} clas={"Tazers"} text={"Термінова допомога"}/>
-            <Wfa src={"https://t.me/Painosnsbot"} clas={"T_botd"} text={"Телеграм бот"} d={true}/>
+            <Wfa src={"https://t.me/Painosnsbot"} clas={"T_botd"} text={"Телеграм бот"} />
       
       
         </div>

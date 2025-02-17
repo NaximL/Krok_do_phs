@@ -8,11 +8,10 @@ import B2_card from '../comp/B2/Card_block';
 import B2_cont_card from '../comp/B2/Card_conteiner';
 import Main_content_B3 from '../comp/B3/B3_Main';
 import MAN from "../imgs/MAN.png"
-import M_color from '../comp/Global/modal_color';
 import MoadReg from '../comp/Global/moad';
 import Carus from '../comp/B4/cariis';
-import Wfa from '../comp/Header/Wfa';
 import Loading from '../comp/Global/Loading';
+import Main_content_B4 from '../comp/B4/cariis';
 
 
 async function get(url) {
@@ -36,10 +35,10 @@ const Home = () => {
     const [Load, setLoad] = useState(false);
 
     const open = () => {
-        let dw = document.getElementById("b1");
-        if (dw) {
-            dw.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
+        // let dw = document.getElementById("b1");
+        // if (dw) {
+        //     dw.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // }
         setZvern(true);
     };
 
@@ -116,6 +115,8 @@ const Home = () => {
                     <Header />
                     <Navbar />
                     <MoadReg o={closef} state={zvern} />
+                    <div className='blocks'>
+                        
                     <Block_m id={1}>
                         <div className='Head'>
                             <div className='track-visibility awf'>
@@ -132,6 +133,10 @@ const Home = () => {
                     <Block_m hide={"hide"} id={3}>
                         <Main_content_B3 />
                     </Block_m>
+                    <Block_m hide={"hide"} id={4}>
+                        <Main_content_B4/>
+                    </Block_m>
+                    </div>
                 </>
             ) : (
                 <Loading />
