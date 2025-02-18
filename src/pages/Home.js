@@ -47,9 +47,7 @@ const Home = () => {
     };
 
     useEffect(() => {
-        if (!localStorage.progres) {
-            localStorage.progres = 0;
-        }
+        localStorage.clear();
 
         get(global.url).then((data) => {
             console.log(data);
