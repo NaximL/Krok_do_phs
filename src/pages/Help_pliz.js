@@ -25,7 +25,7 @@ const Help_fwa = () => {
     const change = () =>{
         if (modal) {    
             document.querySelector(".model").style.display = "none";
-            document.querySelector(".back").classList.remove("back_active");
+            document.querySelector(".back").classList.remove("active");
             
             
             document.querySelector(".gafw").style = "z-index: 100 !important" ;
@@ -33,7 +33,7 @@ const Help_fwa = () => {
         }
         else {
             document.querySelector(".model").style.display = "block";
-            document.querySelector(".back").classList.add("back_active")
+            document.querySelector(".back").classList.add("active")
             document.querySelector(".gafw").style = "z-index: 5 !important";
             Setmodal(!modal);
         }
@@ -65,14 +65,14 @@ const Help_fwa = () => {
         }
 
         if (modal) {    
-            document.querySelector(".back").classList.remove("back_active");
+            document.querySelector(".back").classList.remove("active");
             document.querySelector(".hellp").classList.remove("hellpfw");
             document.querySelector(".hides").classList.remove("show");
             document.querySelector(".gafw").style = "z-index: 100 !important";
             Setmodal(false);
         }
         else {
-            document.querySelector(".back").classList.add("back_active");
+            document.querySelector(".back").classList.add("active");
             document.querySelector(".hellp").classList.add("hellpfw");
             document.querySelector(".gafw").style = "z-index: 5 !important";
             document.querySelector(".hides").classList.add("show")

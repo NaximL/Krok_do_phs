@@ -37,7 +37,7 @@ const Card = ({test}) => {
         if (Number(id) === 1) {
             document.getElementsByClassName("Card_batt")[0].style = "background-color: #c50000"
             setTimeout(()=>{
-            document.getElementsByClassName("Card_batt")[0].style = "background-color: color-mix(in srgb, var(--global_c2), white 20%)"
+            document.getElementsByClassName("Card_batt")[0].style = "background-color: rgb(104, 166, 205);"
 
             },700)
         }
