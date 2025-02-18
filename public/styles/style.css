@@ -17,9 +17,9 @@
 
 
     --nighte:black;
-    --start-color: color-mix(in srgb, var(--global_c2), black 60%);
-    --middle-color: var(--global_c2);
-    --end-color: color-mix(in srgb, var(--global_c2), white 50%);
+    --start-color: rgb(21, 58, 85);
+    --middle-color: rgb(52, 145, 213);
+    --end-color: rgb(154, 200, 234);
 }
 input {
     caret-color: var(--global_c2) !important;
@@ -108,7 +108,7 @@ input[type="number"] {
     position: absolute;
     width: 100%;
     height: 85%;
-    background-color: color-mix(in srgb, var(--global_c2), black 50%);
+    background-color: rgb(26, 72, 106);
     z-index: -1000;
 }
 
@@ -181,16 +181,19 @@ transform: translate(0px,0px);
     font-size: 20px;
     cursor: pointer;
     background-color: white;
-    b {
-        position: absolute;
-        margin-left: 40px;
-        top: 50%;
-        transform:translate(0px,-50%);        
-        color: var(--nighte);
 
-    transition: all 0.3s ease;
-    }
 }
+
+.T_botd b {
+    position: absolute;
+    display: block;
+    left: 40px;
+    top: 50%;
+    transform:translate(0px,-50%); 
+
+transition: all 0.3s ease;
+} 
+
 .T_botd::after {
     content: "";
     position: absolute;
@@ -232,17 +235,20 @@ transform: translate(0px,0px);
     border: 3px solid var(--global_c2);
     font-size: 20px;
     cursor: pointer;
+    color: black;
     background-color: white;
-    b {
-        position: absolute;
-        margin-left: 40px;
-        top: 50%;
-        transform:translate(0px,-50%);        
-        color: var(--nighte);
-
-    transition: all 0.3s ease;
-    }
+ 
 }
+.Avatar b {
+    position: absolute;
+    display: block;
+    left: 40px;
+    top: 50%;
+    transform:translate(0px,-50%); 
+
+transition: all 0.3s ease;
+}
+
 .Avatar::after {
     content: "";
     position: absolute;
@@ -270,8 +276,13 @@ transform: translate(0px,0px);
 
 
 
+a {
+    text-decoration: none !important;
+}
+.dge {
+    color: black !important;
 
-
+}
 
 
 .Tazers {
@@ -285,17 +296,20 @@ transform: translate(0px,0px);
     border: 3px solid var(--global_c2);
     font-size: 20px;
     cursor: pointer;
-    background-color: white;
-    b {
-        position: absolute;
-        margin-left: 40px;
-        top: 50%;
-        transform:translate(0px,-50%);        
-        color: var(--nighte);
 
-    transition: all 0.3s ease;
-    }
+    background-color: white;
+
 }
+.Tazers b {
+    position: absolute;
+    display: block;
+    left: 40px;
+    top: 50%;
+    transform:translate(0px,-50%); 
+
+transition: all 0.3s ease;
+}
+
 .Tazers::after {
     content: "";
     position: absolute;
@@ -470,7 +484,7 @@ animation: mov 1.5s;
     width: 55%;
     height: 40px;
     border-radius: 5px;
-    background-color: color-mix(in srgb, var(--global_c2), black 20%);
+    background-color: rgb(41, 116, 170);
     border: none;
     transition: all 0.15s ease;
     color: white;
@@ -655,7 +669,7 @@ width: 60% !important;
     height: 50px;
     font-size: 20px;
     border-radius: 50%;
-    background-color:  color-mix(in srgb, var(--global_c2), white 20%);
+    background-color: rgb(82, 162, 222);
     color: black;
     transition: all 0.3s ease;    
     border-width: 3px;
@@ -664,8 +678,7 @@ width: 60% !important;
 
 .Card_batt:hover {
  width: 75px;
-    
- background-color:  color-mix(in srgb, var(--global_c2), black 20%);
+ background-color: rgb(62, 156, 210);
  font-size: 28px;
  border-radius:10px;
 }
@@ -673,7 +686,7 @@ width: 60% !important;
 
 .Zagolov_card::first-letter {
     font-size: 40px;
-    color: color-mix(in srgb, var(--global_c2), black 10%);
+    color: rgb(47, 131, 192);
 }
 
 .Zagolov_card {
@@ -748,7 +761,7 @@ width: 60% !important;
     border-radius: 50%;
     animation: spin 0.45s infinite ease;
     z-index: 100000000;
-    border-left: 15px solid color-mix(in srgb,  var(--global_c2) , white 90%);
+    border-left: 15px solid rgb(210, 220, 227);
 }
 
 .ff {
@@ -852,7 +865,7 @@ transform: translate(-50%,-50%);
 }
 .obg::first-letter {
     font-size: 30px;
-    color: color-mix(in srgb, var(--global_c2), black 10%);
+    color: rgb(47, 131, 192);
 }
 .Htd {
     position: relative;
@@ -888,7 +901,7 @@ transform: translate(-50%,-50%);
     font-size: 40px;
     font-weight: bold;
     transition: all 0.3s ease;
-    background-color: color-mix(in srgb, var(--global_c2), black 30%);
+    background-color: rgb(36, 101, 149);
     color: white;
     z-index: 100;
 
@@ -951,7 +964,7 @@ transform: translate(-50%,-50%);
     width: 90%;
     height: 100px;
     border-radius: 15px;
-    background-color: color-mix(in srgb, var(--global_c2), black 30%);
+    background-color: rgb(36, 101, 149);
     color: white;
     display: block;
     font-weight: bold;
@@ -964,7 +977,7 @@ transform: translate(-50%,-50%);
     width: 90%;
     height: 100px;
     border-radius: 15px;
-    background-color: color-mix(in srgb, var(--global_c2), black 30%);
+    background-color: rgb(36, 101, 149);
     color: white;
     display: block;
     font-weight: bold;
@@ -1038,7 +1051,7 @@ transform: translate(-50%,-50%);
     transform: translate(-50%);
     width: 100%;
     border-radius: 0px 0px 15px 15px;
-    background-color:color-mix(in srgb, var(--global_c2), black 10%);
+    background-color: rgb(47, 131, 192);
     height: 50px;
     font-size: 23px;
     font-weight: bold;
@@ -1080,7 +1093,7 @@ transform: translate(-50%,-50%);
     transform: translate(-50%);
     width: 100%;
     border-radius: 0px 0px 15px 15px;
-    background-color:color-mix(in srgb, var(--global_c2), black 10%);
+    background-color: rgb(47, 131, 192);
     height: 50px;
     font-size: 23px;
     font-weight: bold;
@@ -1112,16 +1125,17 @@ display: none;
     font-size: 20px;
     cursor: pointer;
     background-color: white;
-    b {
-        position: absolute;
-        margin-left: 40px;
-        top: 50%;
-        transform:translate(0px,-50%);        
-        color: var(--nighte);
 
-    transition: all 0.3s ease;
-    }
 }
+.fawg b {
+    position: absolute;
+    display: block;
+    left: 40px;
+    top: 50%;
+    transform:translate(0px,-50%); 
+
+transition: all 0.3s ease;
+} 
 .fawg::after {
     content: "";
     position: absolute;

@@ -47,7 +47,10 @@ const Home = () => {
     };
 
     useEffect(() => {
-        localStorage.clear();
+        localStorage.color = JSON.stringify({
+            color1:"rgb(125, 211, 240)",
+            color2:"rgb(52, 145, 213)",
+        })
 
         get(global.url).then((data) => {
             console.log(data);
