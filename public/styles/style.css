@@ -95,7 +95,7 @@ input[type="number"] {
 .B_main {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 700px;
     z-index: 0;
 }
 
@@ -1292,16 +1292,16 @@ transition: all 0.3s ease;
 
  
     #b2 {
-        top: 400px;
+        margin-top: 50px;
     }
     #b3 {
-        top: 800px;
+        margin-top: 200px;
     }
     #b4 {
-        top: 1100px;
+        margin-top: 200px;
     }
     #b5 {
-        top: 1200px;
+        margin-top: 200px;
     }
 
     .Card_batt {
@@ -1339,12 +1339,14 @@ transition: all 0.3s ease;
 
     .B2_card {
         position: relative;
-        left: 34%;
+        left: 38%;
         transform: translate(-50%);
-        margin: 50px;
+        margin: 40px;
+        height: 80%;
     }
     .B2_card_butt {
         width: 50%;
+        bottom: 65px;
     }
 
     .nav_bar {
