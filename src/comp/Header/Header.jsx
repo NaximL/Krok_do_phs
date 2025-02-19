@@ -14,13 +14,19 @@ const Header = () => {
         document.getElementsByClassName("Tazers")[0].style = "transform:translate(-50%,-500%)"
         document.getElementsByClassName("T_botd")[0].style = "transform:translate(-50%,-500%)"
         document.getElementsByClassName("fawg")[0].style = "transform:translate(-50%,20px)"
+        document.getElementsByClassName("back")[0].style = "display:none";
+        document.getElementsByClassName("back")[0].classList.remove("active");
+        document.getElementsByClassName("back")[0].style = "z-index:100";
         setOpen(!open);
         }
         else{
-            document.getElementsByClassName("Avatar")[0].style = "transform:translate(-50%,10px)"
-            document.getElementsByClassName("Tazers")[0].style = "transform:translate(-50%,10px)"
-            document.getElementsByClassName("T_botd")[0].style = "transform:translate(-50%,10px)"
-            document.getElementsByClassName("fawg")[0].style = "transform:translate(-50%,150px)"
+        document.getElementsByClassName("Avatar")[0].style = "transform:translate(-50%,10px)"
+        document.getElementsByClassName("Tazers")[0].style = "transform:translate(-50%,10px)"
+        document.getElementsByClassName("T_botd")[0].style = "transform:translate(-50%,10px)"
+        document.getElementsByClassName("fawg")[0].style = "transform:translate(-50%,150px)"
+        document.getElementsByClassName("back")[0].style = "display:block";
+        document.getElementsByClassName("back")[0].classList.add("active");
+        document.getElementsByClassName("back")[0].style = "z-index:99";
             setOpen(!open);
         }
 

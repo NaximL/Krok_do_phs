@@ -12,6 +12,7 @@ import MoadReg from '../comp/Global/moad';
 import Carus from '../comp/B4/cariis';
 import Loading from '../comp/Global/Loading';
 import Main_content_B4 from '../comp/B4/cariis';
+import Main_content_B5 from '../comp/B5/content';
 
 
 async function get(url) {
@@ -52,13 +53,7 @@ const Home = () => {
             color2:"rgb(52, 145, 213)",
         })
 
-        get(global.url).then((data) => {
-            console.log(data);
-            setTimeout(() => {
-                const naslHead = document.querySelector(".Nasl_Head");
-                if (naslHead) naslHead.style.transform = "translate(0px,50px)";
-            }, 1000);
-        });
+
 
         const initObserver = () => {
             const observer = new IntersectionObserver((entries) => {
@@ -123,7 +118,6 @@ const Home = () => {
                             <div className='track-visibility awf'>
                                 <TypingTexts text={"Потрібна підтримка? Ми тут, щоб тебе вислухати."} time={100} />
                             </div>
-                            <p className='Nasl_Head track-visibility awf'>Про таке не мовчать</p>
                         </div>
                     </Block_m>
 
@@ -136,6 +130,9 @@ const Home = () => {
                     </Block_m>
                     <Block_m hide={"hide"} id={4}>
                         <Main_content_B4/>
+                    </Block_m>   
+                    <Block_m hide={"hide"} id={5}>
+                        <Main_content_B5/>
                     </Block_m>
                     </div>
                 </>

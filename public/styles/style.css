@@ -91,6 +91,7 @@ input[type="number"] {
 
 
 
+
 .B_main {
     position: relative;
     width: 100vw;
@@ -98,10 +99,7 @@ input[type="number"] {
     z-index: 0;
 }
 
-#b1 {
-    top: 0%;
-    background-color: rgb(255, 255, 255);
-}
+
 
 #b1::after {
     content: "";
@@ -112,19 +110,7 @@ input[type="number"] {
     z-index: -1000;
 }
 
-#b2 {
-    top: 100%;
-    background-color: rgb(255, 255, 255);
-}
 
-#b3 {
-    top: 200%;
-    background-color: rgb(255, 255, 255);   
-}
-#b4 {
-    top: 300%;
-    background-color: rgb(255, 255, 255);
-}
 
 .Head {
     position: absolute;
@@ -1148,15 +1134,14 @@ transition: all 0.3s ease;
  }
     
 }
-
-
 .faw {
     position: absolute;
     top: 10px;
     right: 10px;
     width: 60%;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px; 
+    text-align: center;
 }
 
 .faw p {
@@ -1165,7 +1150,11 @@ transition: all 0.3s ease;
     top: 5px;
     width: 80%;
     font-size: 20px;
-    font-weight: normal;
+    font-weight: normal; 
+    text-align: left !important;
+
+    margin-top: 20px;
+
 }
 
 .awfg {
@@ -1236,15 +1225,19 @@ transition: all 0.3s ease;
  }
     
 }
-
-@keyframes rot {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+.GAwg ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
 }
+
+.GAwg li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+
 
 .Loadsf {    
     transition: all 0.3s ease;
@@ -1253,7 +1246,7 @@ transition: all 0.3s ease;
     border-radius: 50%;
     border: 10px solid var(--global_c2);
     border-left: 10px solid whitesmoke;
-    animation: rot 0.7s linear infinite;
+    animation: spin 0.7s linear infinite;
 }
 
 .Loadsf_conteiner {
@@ -1264,9 +1257,6 @@ transition: all 0.3s ease;
     z-index: 99999999;
 }
 
-.GAwg {
-
-}
 
 
 
@@ -1300,9 +1290,7 @@ transition: all 0.3s ease;
 @media (max-width: 600px) {
 
 
-    #b1 {
-
-    }
+ 
     #b2 {
         top: 400px;
     }
@@ -1312,7 +1300,9 @@ transition: all 0.3s ease;
     #b4 {
         top: 1100px;
     }
-
+    #b5 {
+        top: 1200px;
+    }
 
     .Card_batt {
         width: 60px;
