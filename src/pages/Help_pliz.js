@@ -152,7 +152,7 @@ const Help_fwa = () => {
 
                 <p>{txt}</p>
                 <div className="hides">
-                <h2 className="textd">Ваша адреса: <br></br>  <br></br>{Location}</h2>
+                <h2 className="textd"><b>Ваша адреса: </b> <br></br>  <br></br>{Location}</h2>
 
                 <div className="dwaf">
                 <b className="Wfawf">Підтвердіть виклик провівши слайдером</b>

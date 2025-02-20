@@ -506,6 +506,7 @@ animation: mov 1.5s;
 
 .Typing p{
     margin-top: 30px;
+    font-size: 1.5em;
 }
 
 .Phone_b3 {
@@ -1141,7 +1142,6 @@ transition: all 0.3s ease;
     width: 60%;
     font-weight: bold;
     font-size: 40px; 
-    text-align: center;
 }
 
 .faw p {
@@ -1149,7 +1149,7 @@ transition: all 0.3s ease;
     left: 0px;    
     top: 5px;
     width: 80%;
-    font-size: 20px;
+    font-size: 0.6em;
     font-weight: normal; 
     text-align: left !important;
 
@@ -1180,7 +1180,8 @@ transition: all 0.3s ease;
 
 .fwafw {
     position: relative;
-    bottom: -15px;
+    bottom: -280px;
+    left: 39%;
     display: block;
     font-weight: normal !important;
     width: 245px;
@@ -1233,7 +1234,7 @@ transition: all 0.3s ease;
 
 .GAwg li {
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 0.6em;
     color: #333;
     text-align: left;
 }
@@ -1282,7 +1283,7 @@ transition: all 0.3s ease;
 .ana {
     left: 10px;
     top: 10px;
-    
+
 }
 
 
@@ -1397,6 +1398,8 @@ transition: all 0.3s ease;
 
         position: relative;
         left: 0px;
+
+    text-align: center;
         width: 100%;
     }
     .faw p {
