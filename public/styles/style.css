@@ -1279,7 +1279,11 @@ transition: all 0.3s ease;
 
 
 
-
+.ana {
+    left: 10px;
+    top: 10px;
+    
+}
 
 
 
@@ -1296,6 +1300,7 @@ transition: all 0.3s ease;
     }
     #b3 {
         margin-top: 200px;
+        height: 900px;
     }
     #b4 {
         margin-top: 200px;

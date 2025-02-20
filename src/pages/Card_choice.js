@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Htd from "../comp_chc/htdd";
-
+import Card_butt from "../comp_card/card_butt_main";
+import { Link } from "react-router-dom";
 async function get(url) {
     try {
         const response = await fetch(url);
@@ -32,7 +33,7 @@ const Card_chc = () => {
     return (
     
         <>
-    
+            <Link to={'/'}><Card_butt text={"←"} state={"ana"}/></Link>
             <h1 className="xag">Виберіть картку</h1>
             <div className="ggd">
             {Lst.map((obj,key)=>(

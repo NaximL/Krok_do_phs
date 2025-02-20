@@ -1,7 +1,7 @@
 import { useEffect,useState } from "react";
 import Slider from "../comp/Global/Slider";
-
-
+import { Link } from "react-router-dom";
+import Card_butt from "../comp_card/card_butt_main";
 const Help_fwa = () => {
 
     const [modal,Setmodal] = useState(false)
@@ -134,6 +134,8 @@ const Help_fwa = () => {
     return ( 
         <>
             <div className="back"></div>
+
+            <Link to={'/'}><Card_butt text={"←"} state={"ana"}/></Link>
             <div className="model">
                 <div className="fwa">
                     <b>Ваші кординати: <br></br> {`Широта: ${lt},`}<br></br> {`Довгота: ${ln}`} </b>
