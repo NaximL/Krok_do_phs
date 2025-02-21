@@ -9,40 +9,51 @@ import B2_cont_card from '../comp/B2/Card_conteiner';
 import Main_content_B3 from '../comp/B3/B3_Main';
 import MAN from "../imgs/MAN.png"
 import MoadReg from '../comp/Global/moad';
-import Carus from '../comp/B4/cariis';
 import Loading from '../comp/Global/Loading';
 import Main_content_B4 from '../comp/B4/cariis';
 import Main_content_B5 from '../comp/B5/content';
-
-
-async function get(url) {
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            console.error(response.status);
-            throw new Error(response.statusText);
-        }
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error(error);
-        throw new Error(error);
-    }
-}
+import Main_content_B6 from '../comp/B6/content';
 
 
 const Home = () => {
     const [zvern, setZvern] = useState(false);
     const [Load, setLoad] = useState(false);
+    const [Clck, setClck] = useState(false);
+    const [opens, setOpen] = useState(false);
+    
 
     const open = () => {
-        // let dw = document.getElementById("b1");
-        // if (dw) {
-        //     dw.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        // }
+        let dw = document.getElementById("b1");
+        if (dw) {
+            dw.scrollIntoView({ behavior: 'smooth' });
+        }
         setZvern(true);
     };
+    const awf = ()=>{
+        if (opens) {
+        document.getElementsByClassName("Avatar")[0].style = "transform:translate(-50%,-500%)"
+        document.getElementsByClassName("Tazers")[0].style = "transform:translate(-50%,-500%)"
+        document.getElementsByClassName("T_botd")[0].style = "transform:translate(-50%,-500%)"
+        document.getElementsByClassName("fawg")[0].style = "transform:translate(-50%,20px)"
+        document.getElementsByClassName("back")[0].style = "display:none";
+        document.getElementsByClassName("back")[0].classList.remove("active");
+        document.getElementsByClassName("back")[0].style = "z-index:100";        
+        setClck(null);
+        setOpen(!opens);
+        }
+        else{
+        document.getElementsByClassName("Avatar")[0].style = "transform:translate(-50%,10px)"
+        document.getElementsByClassName("Tazers")[0].style = "transform:translate(-50%,10px)"
+        document.getElementsByClassName("T_botd")[0].style = "transform:translate(-50%,10px)"
+        document.getElementsByClassName("fawg")[0].style = "transform:translate(-50%,150px)"
+        document.getElementsByClassName("back")[0].style = "display:block";
+        document.getElementsByClassName("back")[0].classList.add("active");
+        document.getElementsByClassName("back")[0].style = "z-index:99";
+        setClck(true);
+            setOpen(!opens);
+        }
 
+    }
     const closef = () => {
         setZvern(false);
     };
@@ -106,9 +117,9 @@ const Home = () => {
         <>
             {Load ? (
                 <>
-                    <div className='back'></div>
+                    <div onClick={Clck ? awf : null} className='back'></div>
 
-                    <Header />
+                    <Header awf={awf}/>
                     <Navbar />
                     <MoadReg o={closef} state={zvern} />
                     <div className='blocks'>
@@ -129,10 +140,13 @@ const Home = () => {
                         <Main_content_B3 />
                     </Block_m>
                     <Block_m hide={"hide"} id={4}>
-                        <Main_content_B4/>
+                        <Main_content_B4  onsub={open}/>
                     </Block_m>   
                     <Block_m hide={"hide"} id={5}>
                         <Main_content_B5/>
+                    </Block_m>
+                    <Block_m hide={"hide"} id={6}>
+                        <Main_content_B6/>
                     </Block_m>
                     </div>
                 </>

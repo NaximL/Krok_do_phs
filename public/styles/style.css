@@ -259,7 +259,14 @@ transition: all 0.3s ease;
 }
 
 
-
+.wag {
+    position: absolute;
+    display: block;
+    width: 35%;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
 
 
 a {
@@ -1136,9 +1143,9 @@ transition: all 0.3s ease;
     
 }
 .faw {
-    position: absolute;
+    position: relative;
     top: 10px;
-    right: 10px;
+    left: 40%;
     width: 60%;
     font-weight: bold;
     font-size: 40px; 
@@ -1180,8 +1187,8 @@ transition: all 0.3s ease;
 
 .fwafw {
     position: relative;
-    bottom: -280px;
-    left: 39%;
+    top: 20px;
+    left: 40%;
     display: block;
     font-weight: normal !important;
     width: 245px;
@@ -1309,6 +1316,9 @@ transition: all 0.3s ease;
     #b5 {
         margin-top: 200px;
     }
+    #b6 {
+        margin-top: 200px;
+    }
 
     .Card_batt {
         width: 60px;
@@ -1426,9 +1436,11 @@ transition: all 0.3s ease;
     
     .ne_sigma_class {
         width: 100% !important;
+        bottom: 0px;
     }
     .sigma_class {
         width: 100% !important;
+        bottom: 0px;
     }
 
     .Tazers {
@@ -1452,7 +1464,11 @@ transition: all 0.3s ease;
         transform: translate(-50%,-500%);
     }
 
+    .fwafw {
 
+    left: 1%;
+
+    }
     .fawg {
         display: block;
     }
@@ -1460,7 +1476,9 @@ transition: all 0.3s ease;
     .cur {
         font-size: 40px;
     }
-
+    .wag {
+        width: 100% !important;
+    }
 
 }
 

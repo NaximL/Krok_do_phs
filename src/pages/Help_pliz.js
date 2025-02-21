@@ -132,7 +132,7 @@ const Help_fwa = () => {
       }
     },[])
     return ( 
-        <>
+        <div className="wag">
             <div className="back"></div>
 
             <Link to={'/'}><Card_butt text={"←"} state={"ana"}/></Link>
@@ -163,7 +163,7 @@ const Help_fwa = () => {
 </div>
 
             </div>
-        </>
+        </div>
      );
 }
  
