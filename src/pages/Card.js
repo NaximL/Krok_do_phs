@@ -116,6 +116,7 @@ const Card = ({test}) => {
                                 <N_text text={Card.text} />
                             </G_text>
                         </G_img>
+                        <div className="fawgw"></div>
                         <B_text krok={Card.krok} />
                         <Card_butt onclk={ex} state={leftd} text={"←"}/>
                         <Card_butt onclk={next} state={rightd} text={"→"}/>

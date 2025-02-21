@@ -32,7 +32,7 @@ const Help_fwa = () => {
             Setmodal(!modal);
         }
         else {
-            document.querySelector(".model").style.display = "block";
+            document.querySelector(".model").style.display = "block"
             document.querySelector(".back").classList.add("active")
             document.querySelector(".gafw").style = "z-index: 5 !important";
             Setmodal(!modal);
@@ -98,7 +98,6 @@ const Help_fwa = () => {
       
           if (response.ok) {
             const result = await response.json();
-            console.log('Call initiated successfully:', result);
           } else {
             console.error('Failed to initiate call:', response.status, response.statusText);
           }
@@ -121,10 +120,10 @@ const Help_fwa = () => {
               console.log("Адреса:", data.results[1].formatted_address);
               SetLocation(data.results[1].formatted_address)
             })
-            .catch((error) => console.error("Помилка отримання адреси:", error)); 
+            .catch((error) => console.error(error)); 
           },
           (error) => {
-            console.error("Геолокація недоступна:", error.message);
+            console.error(error.message);
           }
         );
       } else {
