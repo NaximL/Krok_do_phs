@@ -1246,6 +1246,13 @@ transition: all 0.3s ease;
     text-align: left;
 }
 
+.dawg {
+    height: 850px;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-radius: 0px;
+    object-fit: contain !important;
+}
 
 .Loadsf {    
     transition: all 0.3s ease;
@@ -1301,7 +1308,11 @@ transition: all 0.3s ease;
 
 @media (max-width: 600px) {
 
-
+    .dawg {
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+        height: 650px !important;
+    }
  
     #b2 {
         margin-top: 50px;
