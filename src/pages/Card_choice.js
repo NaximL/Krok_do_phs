@@ -34,7 +34,6 @@ const Card_chc = () => {
     
         <>
             <Link to={'/'}><Card_butt text={"←"} state={"ana"}/></Link>
-            <h1 className="xag">Виберіть картку</h1>
             <div className="ggd">
             {Lst.map((obj,key)=>(
                 <Htd key={key} obj={obj}/>
