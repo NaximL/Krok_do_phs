@@ -18,21 +18,12 @@
         if (window.Telegram && Telegram.WebApp) {
           const tg = Telegram.WebApp;
           tg.expand();
-          tg.setHeaderColor(tg.colorScheme === "dark" ? "#1c1c1e" : "#ffffff");
-          tg.setBackgroundColor("secondary_bg_color");
-          
-          document.body.style.background = tg.colorScheme === "dark" ? "#1c1c1e" : "#ffffff";
-          
-          tg.onEvent("themeChanged", function () {
-            document.body.style.background = tg.colorScheme === "dark" ? "#1c1c1e" : "#ffffff";
-          });
-          
-          tg.MainButton.setText("Продолжить");
-          tg.MainButton.show();
-          
+          tg.setHeaderColor('rgb(12, 38, 59)');
+
           tg.BackButton.show();
           tg.onEvent("backButtonClicked", function () {
             console.log("Пользователь нажал Назад");
+            window.history.back(); 
           });
           
           console.log("Настройки Telegram WebApp применены");
