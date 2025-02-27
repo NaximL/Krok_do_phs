@@ -5,7 +5,7 @@ import Navigatosr from "./Navigator";
 function App() {
 
 global.url = `https://644ab0e4a8370fb32155be44.mockapi.io/krok`
-global.url_server = "https://serverdf-5c9c8eec8694.herokuapp.com"
+global.url_server = "http://192.168.1.246:3001"
 //https://serverdf-5c9c8eec8694.herokuapp.com
 useEffect(()=>{ 
   const updateColors = () => {

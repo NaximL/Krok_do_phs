@@ -29,6 +29,17 @@
     <title>React App</title>
   </head>
   <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.Telegram && Telegram.WebApp) {
+          Telegram.WebApp.expand(); 
+          Telegram.WebApp.setHeaderColor("rgb(12, 38, 59)"); 
+          console.log("Цвет верхней панели изменен");
+        } else {
+          console.log("Telegram WebApp API не доступен");
+        }
+      });
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

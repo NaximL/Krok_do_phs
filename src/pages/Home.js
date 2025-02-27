@@ -7,7 +7,6 @@ import Header from '../comp/Header/Header';
 import B2_card from '../comp/B2/Card_block';
 import B2_cont_card from '../comp/B2/Card_conteiner';
 import Main_content_B3 from '../comp/B3/B3_Main';
-import MAN from "../imgs/MAN.png"
 import MoadReg from '../comp/Global/moad';
 import Loading from '../comp/Global/Loading';
 import Main_content_B4 from '../comp/B4/cariis';
