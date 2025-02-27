@@ -22,13 +22,12 @@
 
           tg.BackButton.show();
           tg.onEvent("backButtonClicked", function () {
-            console.log("Пользователь нажал Назад");
             window.history.back(); 
           });
           
-          console.log("Настройки Telegram WebApp применены");
+          console.log("Telegram api налаштований");
         } else {
-          console.log("Telegram WebApp API не доступен");
+          console.log("Telegram api не підтримується");
         }
       });
     </script>
