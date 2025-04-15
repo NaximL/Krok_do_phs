@@ -209,7 +209,6 @@ transition: all 0.3s ease;
 
 
 
-
 .Avatar {
     position: fixed;
     right: 20px;
@@ -1051,6 +1050,7 @@ transform: translate(-50%,-50%);
 }
 
 .slider {
+    left: 7px;
     bottom: 110px;
     width: 95%;
     height: 50px;
