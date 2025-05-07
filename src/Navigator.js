@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Card from "./pages/Card"
 import Card_chc from './pages/Card_choice';
 import Help_fwa from './pages/Help_pliz';
+
 function Navigatosr() {
   return (
     <BrowserRouter>

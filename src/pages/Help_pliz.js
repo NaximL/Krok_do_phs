@@ -1,5 +1,5 @@
 import { useEffect,useState } from "react";
-import Slider from "../comp/Global/Slider";
+import Slider from "../components/Global/Slider";
 import { Link } from "react-router-dom";
 import Card_butt from "../comp_card/card_butt_main";
 const Help_fwa = () => {
