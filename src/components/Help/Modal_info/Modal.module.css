@@ -1,0 +1,39 @@
+.Model {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    height: 70%;
+    background-color: white;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+    display: block;
+    z-index: 10000;
+    transition: all 0.3s ease;
+    display: none;
+}
+
+
+.ModelConteiner {
+    position: relative;
+    left: 5px;
+    top: 10px;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.ModelBack {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%);
+    width: 100%;
+    border-radius: 0px 0px 15px 15px;
+    background-color: rgb(47, 131, 192);
+    height: 50px;
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+}
+
+

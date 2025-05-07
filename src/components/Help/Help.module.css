@@ -1,0 +1,29 @@
+
+
+.fwfa {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -30px);
+    top: 0px;
+    transition: all 0.3s ease;
+    font-family: "Roboto", sans-serif;
+}
+
+.containers {    
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    top: 30px;
+    color: black;
+    width: 90%;    
+    font-size: 23px;
+}
+
+.Slider_text {
+    position: absolute;
+    left: 10px;
+    bottom: 180px;
+    font-weight: bold;
+    color: black;
+    font-size: 23px;
+}

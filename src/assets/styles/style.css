@@ -834,14 +834,7 @@ a {
     display: none;
 }
 
-.textd {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    top: 30px;
-    color: black;
-    width: 90%;
-}
+
 
 .textte {
     position: absolute;
@@ -891,27 +884,9 @@ a {
     display: block !important;
 }
 
-.model {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    width: 90%;
-    height: 70%;
-    background-color: white;
-    border-radius: 15px;
-    transform: translate(-50%, -50%);
-    display: block;
-    z-index: 10000;
-    transition: all 0.3s ease;
-    display: none;
-}
 
-.fwa {
-    position: relative;
-    left: 5px;
-    top: 10px;
-    font-size: 25px;
-}
+
+
 
 .fwaf {
     position: relative;
@@ -920,27 +895,8 @@ a {
     margin-top: 30px;
 }
 
-.gafwf {
-    position: absolute;
-    left: 50%;
-    bottom: 0px;
-    transform: translate(-50%);
-    width: 100%;
-    border-radius: 0px 0px 15px 15px;
-    background-color: rgb(47, 131, 192);
-    height: 50px;
-    font-size: 23px;
-    font-weight: bold;
-    color: white;
-}
 
-.Wfawf {
-    position: absolute;
-    left: 5px;
-    bottom: 180px;
-    color: black;
-    font-size: 23px;
-}
+
 
 .slider {
     left: 7px;
@@ -985,6 +941,7 @@ a {
     top: 0px;
     transition: all 0.3s ease;
     font-family: "Roboto", sans-serif;
+    display: none;
 }
 
 .fawg {
