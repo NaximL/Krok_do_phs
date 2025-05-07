@@ -801,6 +801,7 @@ a {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    font-size: 35px;
 }
 
 .hellpfw {
@@ -983,6 +984,7 @@ a {
     transform: translate(-50%, -30px);
     top: 0px;
     transition: all 0.3s ease;
+    font-family: "Roboto", sans-serif;
 }
 
 .fawg {
@@ -1181,7 +1183,7 @@ a {
 
   
     #b2 {
-        margin-top: 120px;
+        margin-top: 150px;
     }
     #b3 {
         margin-top: 240px;
