@@ -1,5 +1,4 @@
 import styles from './HeaderNav.module.css';
-import imgs from '../../../assets/imgs/logo.png';
 import img1 from '../../../assets/imgs/nasl3.png';
 import img2 from '../../../assets/imgs/telegram.svg';
 import img3 from '../../../assets/imgs/brath.png';

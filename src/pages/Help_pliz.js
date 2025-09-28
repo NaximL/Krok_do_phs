@@ -80,29 +80,30 @@ const Help_fwa = () => {
     }
   };
   const makeCall = async (to, message) => {
-    const url = global.url_server;
-    const payload = {
-      to,
-      message,
-    };
+    // const url = global.url_server;
+    // const payload = {
+    //   to,
+    //   message,
+    // };
 
-    try {
-      const response = await fetch(`${url}/call`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      });
+    // try {
+    //   const response = await fetch(`${url}/call`, {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify(payload),
+    //   });
 
-      if (response.ok) {
-        const result = await response.json();
-      } else {
-        console.error('Failed to initiate call:', response.status, response.statusText);
-      }
-    } catch (error) {
-      console.error('Error while making call:', error);
-    }
+    //   if (response.ok) {
+    //     const result = await response.json();
+    //   } else {
+    //     console.error('Failed to initiate call:', response.status, response.statusText);
+    //   }
+    alert("Тимчасово недоступно")
+    // } catch (error) {
+    //   console.error('Error while making call:', error);
+    // }
   };
 
   useEffect(() => {
@@ -141,13 +142,10 @@ const Help_fwa = () => {
 
 
       <button className="gafw" onClick={change}>Моє місце знаходження</button>
-      
+
 
       <div className="hellp" onClick={change_another_modal}>
-
-
         <p>{txt}</p>
-
         <div className="hides">
           <h2 className={styles.containers}>
             <div className="fwa">

@@ -4,7 +4,7 @@ import styles from '../HeaderNav.module.css';
 const LinkNav = ({ url, text, image }) => {
     return (
         <li className={styles.navItem}>
-            <Link to={url} className={styles.navLink}>
+            <Link to={url} className={styles.NavLink}>
                 <img src={image} alt="Logo" />
                 {text}
             </Link>
